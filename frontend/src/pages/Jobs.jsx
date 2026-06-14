@@ -1,22 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import api from '../services/api';
-import { useToast } from '../context/ToastContext';
-import { useSearchParams } from 'react-router-dom';
 import {
-  Plus,
-  Search,
+  BookOpen,
+  Calendar,
   ChevronLeft,
   ChevronRight,
   Edit2,
-  Trash2,
   ExternalLink,
-  MapPin,
-  Calendar,
-  X,
   FileText,
   Link as LinkIcon,
-  BookOpen,
+  MapPin,
+  Plus,
+  Search,
+  Trash2,
+  X,
 } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
+import { useToast } from '../context/ToastContext';
+import api from '../services/api';
 const Jobs = () => {
   const [searchParams] = useSearchParams();
   // State for jobs
@@ -405,7 +405,7 @@ const Jobs = () => {
 
       {/* Slide-over Drawer Modal Form */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/40 p-4 backdrop-blur-sm">
+       <div className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-slate-900/40 p-4 pt-10 backdrop-blur-sm">
           <div className="w-full max-w-lg bg-white border border-slate-200 rounded-3xl p-6 md:p-8 shadow-2xl relative animate-slide-up">
             {/* Close Button */}
             <button
