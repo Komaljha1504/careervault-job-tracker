@@ -1,28 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import api from '../services/api';
+import {
+  Award,
+  Briefcase,
+  CalendarCheck,
+  Clock,
+  Send,
+  TrendingUp,
+  XCircle
+} from 'lucide-react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
-  Briefcase,
-  Send,
-  CalendarCheck,
-  Award,
-  XCircle,
-  Clock,
-  TrendingUp,
-  ArrowRight,
-} from 'lucide-react';
-import {
-  BarChart,
   Bar,
+  BarChart,
+  CartesianGrid,
+  Cell,
+  Pie,
+  PieChart,
+  ResponsiveContainer,
+  Tooltip,
   XAxis,
   YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
-  PieChart,
-  Pie,
-  Cell,
 } from 'recharts';
+import api from '../services/api';
 const Dashboard = () => {
   const navigate = useNavigate();
   const [stats, setStats] = useState(null);
@@ -379,8 +378,8 @@ const Dashboard = () => {
               <p className="text-xs text-slate-500 mt-1 font-medium">Breakdown distribution counts across recruitment phases.</p>
             </div>
             <div className="h-80 w-full flex-1">
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={chartData} margin={{ top: 10, right: 10, left: -25, bottom: 0 }}>
+              <ResponsiveContainer width="100%" height={300}>
+                <BarChart data={chartData} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#F1F5F9" vertical={false} />
                   <XAxis dataKey="name" stroke="#64748B" fontSize={11} tickLine={false} />
                   <YAxis stroke="#64748B" fontSize={11} tickLine={false} axisLine={false} />
