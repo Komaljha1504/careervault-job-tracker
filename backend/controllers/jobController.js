@@ -4,16 +4,17 @@ const Job = require('../models/Job');
 // @route   POST /api/jobs
 // @access  Private
 const createJob = async (req, res) => {
-  const {
-    companyName,
-    jobTitle,
-    location,
-    dateApplied,
-    interviewDate,
-    status,
-    jobUrl,
-    notes
-  } = req.body;
+ const {
+  companyName,
+  jobTitle,
+  location,
+  dateApplied,
+  interviewDate,
+  status,
+  jobUrl,
+  resume,
+  notes
+} = req.body;
 
   try {
     const job = await Job.create({
