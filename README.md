@@ -126,3 +126,4 @@ Job Application Tracker/
    - *Rejected*
 4. **Modal Management Form**: Add or edit application details, set the date applied, insert application links, and write interview notes in a slide-over modal container.
 5. **Secure Authentication**: JWT-based session security storing tokens in local storage. Protected routes prevent unauthorized access to the application dashboards.
+Testing YOLO GitHub achivement
