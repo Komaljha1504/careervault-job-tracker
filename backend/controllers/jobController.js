@@ -18,16 +18,17 @@ const createJob = async (req, res) => {
 
   try {
     const job = await Job.create({
-      user: req.user._id,
-      companyName,
-      jobTitle,
-      location,
-      dateApplied: dateApplied || undefined,
-      interviewDate: interviewDate || undefined,
-      status,
-      notes,
-    });
-
+    user: req.user._id,
+    companyName,
+    jobTitle,
+    location,
+    dateApplied: dateApplied || undefined,
+    interviewDate: interviewDate || undefined,
+    status,
+    jobUrl,
+    resume,
+    notes,
+});
     res.status(201).json({
       success: true,
       data: job,
